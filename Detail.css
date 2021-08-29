@@ -23,7 +23,6 @@ li {
 }
 
 
-
 /*  헤더  */
 
 header {
@@ -154,49 +153,6 @@ section ul > li {
   margin-bottom: 35px;
 }
 
-/* 1440~1920px 노트북 L */
-@media screen and (min-width : 1441px) and (max-width : 1920px){
-  .detail-info{
-    justify-content: center;
-  }
-  .detail-img{
-    margin: 0px 0px 30px 0px;
-  }
-  .detail-card-review{
-    display: block;
-  }
-}
-
-@media screen and (min-width : 1025px) and (max-width:1440px) {
-  .detail-info{
-    justify-content: center;
-  }
-  .detail-img{
-    margin: 0px 0px 30px 0;
-  }
-  .detail-card-review {
-    display: block !important;
-  }
-}
-
-@media all and (min-width : 768px) and (max-width: 1024px) {
-  .detail-info {
-    justify-content: center;
-  }    
-  .detail-img{
-    margin: 0px 0px 30px 0;
-  }
-  section ul > li {
-    width: 100%;
-  }
-  .detail-card-review {
-    display: block;
-  }
-  .detail-cards {
-    margin-right: 0px;
-  }
-}
-
 /* 카드리뷰 */
 .detail-card-review {
   margin: 90px 0px;
@@ -215,6 +171,7 @@ section ul > li {
   flex-direction: column;
   justify-content: center;
   margin-right: 66px;
+  box-shadow: 4px 4px 0px 0px gray;
 }
 .detail-cards:nth-child(3){
   margin-right: 0px;
@@ -232,7 +189,7 @@ section ul > li {
 
 .detail-text-review {
   background-color: rgba(35, 37, 38, 0.1);
-  padding: 130px 0px;
+  padding: 30px 0px;
   position: relative;
 }
 
@@ -245,6 +202,7 @@ section ul > li {
   border: 1px solid black;  
   position: absolute;
   background-color: rgba(34, 36, 39,0.1);
+  box-shadow: 4px 4px 0px 0px gray;
   cursor: pointer;
 }
 
@@ -252,10 +210,6 @@ table {
   margin: auto;
   width: 100%;
   text-align: center;
-}
-
-table-inner {
-  margin : 0px 250px
 }
 
 th, td{
@@ -267,4 +221,112 @@ th, td{
 th {
   border-top: 3px solid #000;
   border-bottom: 2px solid rgba(35, 35, 35, 0.3);
+}
+
+/* 리뷰작성 */
+
+.detail-review-box {
+  display: flex;
+  height: 10vh;
+  margin-bottom: 20px;
+}
+
+.detail-review-title {
+  writing-mode: vertical-lr;
+  font-size: 25px;
+  font-weight: bold;
+  margin: auto 10px 25px auto;
+}
+
+.detail-review-content {
+  border: 1px solid black;
+  width: 80%;
+  resize: none;
+  border-radius: 20px;
+  /* height: 10vh; */
+}
+
+.detail-review-submit {
+  width: 20%;
+  font-size: 2rem;
+  border: 1px solid black;
+  border-radius: 20px;
+  /* height:10vh; */
+}
+
+.detail-review-checkbox-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.detail-review-checkbox {
+  font-size: 1.5rem;
+  margin-left: 50px;
+}
+
+.form-check-input {
+  width: 100%;
+  height: 100%;
+}
+
+/* 1440~1920px 노트북 L */
+@media screen and (min-width : 1441px) and (max-width : 1920px){
+  .detail-info{
+    justify-content: center;
+  }
+  .detail-img{
+    margin: 0px 0px 30px 0px;
+  }
+}
+
+@media screen and (min-width : 1025px) and (max-width:1440px) {
+  .detail-info{
+    justify-content: center;
+  }
+  .detail-img{
+    margin: 0px 0px 30px 0;
+  }
+}
+
+@media screen and (min-width : 768px) and (max-width: 1024px) {
+  .inner {
+    margin: 130px 150px;
+  }
+  .detail-info {
+    justify-content: center;
+  }    
+  .detail-img{
+    margin: 0px 0px 30px 0;
+  }
+  p {
+    text-align: center;
+  }
+  .detail-fact{
+    text-align: center;
+    height: auto;
+  }
+  section ul > li {
+    width: 100%;
+  }
+  .detail-card-review {
+    margin: 20px auto;
+    display: block;
+  }
+  .detail-cards {
+    margin: auto;
+    width: auto;
+    height: 130px;
+    margin-bottom: 30px;    
+  }
+  .detail-cards:nth-child(3){
+    margin-right: auto;
+  }
+  .detail-text{
+    margin: 10px auto;
+  }
+  .detail-cards:active{
+    background-color: blue;
+    opacity: 0.8;
+    color: white;
+  }
 }
