@@ -9,6 +9,7 @@
   <script src="./Detail.js" defer></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" 
   rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <title>상세 페이지</title>
 </head>
 <body>
@@ -68,61 +69,42 @@
     </div>
   </section>
   <section class="detail-text-review">
-    <button class="detail-review-btn" id="detail-review-btn" onclick="toggleBtn()">리뷰 작성하기</button>
+    <div class="detail-comment-box" id="detail-comment-box">
+      <!-- <div class="detail-comment-writer">나는누구</div> -->
+      <div class="detail-comment-review">맛있어용
+        <div class="detail-comment-del" onclick="reviewDel()">
+          <i class="fas fa-minus-circle"></i>
+        </div>
+      </div>
+      <div class="detail-comment-date">2021. 8. 31. 오후 9:39:47</div>
+    </div>
     <!-- 부트스트랩 input -->
     <div class="detail-review-input inner" id="detail-review-input">
-      <form class="detail-review-box">
-        <textarea class="detail-review-content" aria-label=리뷰작성하기"></textarea>
-        <button type="button" class="detail-review-submit">리뷰<br>쓰기</button>
-      </form>
+      <div class="detail-review-form-box">
+        <input type="text" id="detail-review-content" class="detail-review-content" autocomplete="off" aria-label="리뷰내용"></input>
+        <button type="submit" onclick="reviewSubmit()" class="detail-review-submit-btn" id="detail-review-box-form" value="리뷰쓰기">리뷰<br>쓰기</button>
+      </div>
       <div class="detail-review-checkbox-container">
         <div class="detail-review-checkbox">
-          <input class="form-check-input" type="radio" name="detail-radio" id="detail-review-check-box-best">
-          <label class="detail-form-check-label" for="detail-review-check-box-best">
+          <input class="detail-form-radio" checked="false" type="radio" name="detail-form-radio" id="detail-form-radio-best">
+          <label class="detail-form-radio-label" for="detail-form-radio-best">
             좋아요
           </label>
         </div>
         <div class="detail-review-checkbox">
-          <input class="form-check-input" type="radio" name="detail-radio" id="detail-review-check-box-nomal">
-          <label class="detail-form-check-label" for="detail-review-check-box-nomal">
-            별로에요
-        </label>
+          <input class="detail-form-radio" checked="false"  type="radio" name="detail-form-radio" id="detail-form-radio-best">
+          <label class="detail-form-radio-label" for="detail-form-radio-best">
+            보통이에요
+          </label>
         </div>
         <div class="detail-review-checkbox">
-          <input class="form-check-input" type="radio" name="detail-radio" id="detail-review-check-box-bad">
-          <label class="detail-form-check-label" for="detail-review-check-box-bad">
-            싫어요
+          <input class="detail-form-radio" checked="false"  type="radio" name="detail-form-radio" id="detail-form-radio-best">
+          <label class="detail-form-radio-label" for="detail-form-radio-best">
+            별로에요
           </label>
         </div>
       </div>
     </div>
-    </div>    
-    <table>
-      <thead>
-        <tr>
-          <th>리뷰</th>
-          <th>작성자</th>
-          <th>작성일</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>커피마시써영</td>
-          <td>소비자1</td>
-          <td>21. 08. 25</td>
-        </tr>
-        <tr>
-          <td>커피마시써영2</td>
-          <td>소비자2</td>
-          <td>21. 08. 25</td>
-        </tr>
-        <tr>
-          <td>커피마시써영3</td>
-          <td>소비자3</td>
-          <td>21. 08. 25</td>
-        </tr>
-      </tbody>
-    </table>
   </section>
 </body>
 </html>

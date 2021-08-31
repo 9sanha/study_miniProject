@@ -8,7 +8,7 @@ body {
 }
 
 .inner {
-  margin:  130px 250px;
+  margin: auto 250px;
 }
 
 
@@ -106,6 +106,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  margin-top: 50px;
 }
 
 .detail-img {
@@ -189,74 +190,60 @@ section ul > li {
 
 .detail-text-review {
   background-color: rgba(35, 37, 38, 0.1);
-  padding: 100px 0px;
+  padding: 10px 0px;
   position: relative;
-}
-
-.detail-review-btn {
-  right: 20px;
-  top: 20px;
-  width: 150px;
-  height: 50px;
-  border-radius: 2vh;
-  border: 1px solid black;  
-  position: absolute;
-  background-color: rgba(34, 36, 39,0.1);
-  box-shadow: 4px 4px 0px 0px gray;
-  cursor: pointer;
-}
-
-table {
-  margin: auto;
-  width: 100%;
-  text-align: center;
-}
-
-th, td{
-  padding: 20px;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-th {
-  border-top: 3px solid #000;
-  border-bottom: 2px solid rgba(35, 35, 35, 0.3);
 }
 
 /* 리뷰작성 */
 
-
-.detail-review-input {
-  display: none;
+.detail-comment-box {
+  margin: 30px 250px;
 }
 
-.detail-review-box {
+.detail-comment-box > div {
+  padding: 10px 0px;
+}
+
+.detail-comment-review {
+  display: flex;
+  position: relative;
+}
+
+.detail-comment-del {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.detail-comment-writer {
+  border-top: 2px solid rgba(35, 37, 38, 0.5);
+  font-weight: 600;
+}
+
+.detail-comment-date {
+  border-bottom: 2px solid rgba(35, 37, 38, 0.5);
+  color: rgba(35, 37, 38, 0.5);
+}
+
+
+.detail-review-form-box {
   display: flex;
   height: 10vh;
   margin-bottom: 20px;
 }
 
-.detail-review-title {
-  writing-mode: vertical-lr;
-  font-size: 25px;
-  font-weight: bold;
-  margin: auto 10px 25px auto;
-}
-
 .detail-review-content {
-  border: 1px solid black;
-  width: 80%;
+  border: 1px solid rgba(34, 36, 39,0.1);
+  width: 90%;
   resize: none;
-  border-radius: 20px;
-  /* height: 10vh; */
 }
 
-.detail-review-submit {
-  width: 20%;
-  font-size: 2rem;
-  border: 1px solid black;
-  border-radius: 20px;
-  /* height:10vh; */
+.detail-review-submit-btn{
+  width: 10%;
+  font-size: 1.2rem;
+  border: 1px solid rgba(34, 36, 39,0.1);
+  cursor: pointer;
 }
 
 .detail-review-checkbox-container {
@@ -265,16 +252,12 @@ th {
 }
 
 .detail-review-checkbox {
-  font-size: 1.5rem;
   margin-left: 50px;
 }
 
-.form-check-input {
-  width: 100%;
-  height: 100%;
-}
 
 /* 1440~1920px 노트북 L */
+
 @media screen and (min-width : 1441px) and (max-width : 1920px){
   .detail-info{
     justify-content: center;
@@ -283,6 +266,8 @@ th {
     margin: 0px 0px 30px 0px;
   }
 }
+
+/* 렙톱 */
 
 @media screen and (min-width : 1025px) and (max-width:1440px) {
   .detail-info{
@@ -293,9 +278,10 @@ th {
   }
 }
 
-@media screen and (min-width : 768px) and (max-width: 1024px) {
+/* 모바일~테블릿~렙톱 */
+@media screen and (min-width : 320px) and (max-width: 1024px) {
   .inner {
-    margin: 130px 150px;
+    margin: auto 150px;
   }
   .detail-info {
     justify-content: center;
@@ -335,4 +321,22 @@ th {
     opacity: 0.8;
     color: white;
   }
+  .detail-text-review{
+    margin-top: 60px;
+  }
+  .detail-comment-box {
+    margin: 30px 150px;
+  }
+}
+/* 이너 특별관리 */
+@media screen and (min-width : 320px) and (max-width: 767px) {
+  .inner{
+    margin: auto 60px;
+  }
+  header {
+    display: block;
+  }
+  .detail-comment-box {
+    margin: 30px 60px;
+  } 
 }
