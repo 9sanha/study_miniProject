@@ -1,21 +1,21 @@
 // 댓글쓰기
 
 function reviewSubmit() {
-  const reviewInput = document.getElementById("detail-review-content")
-  const reviewValue = reviewInput.value.trim()
-
+const reviewInput = document.getElementById("detail-review-content")
+const reviewValue = reviewInput.value.trim()
+  
   // 체크박스
   const reviewRadio = document.getElementsByClassName("detail-form-radio")
-  for (let i =0; i<reviewRadio.length; i++){
-    if(reviewValue && reviewRadio[i].checked === true){
-      const date = new Date().toLocaleString()
   
+  for (let i = 0; i<reviewRadio.length; i++){
+    if(reviewValue && reviewRadio[i].checked === true){
+      let reviewsObj = {};
+      const date = new Date().toLocaleString()
       // console.log(date)
       // 날짜
       const commentDate = document.createElement("div")
       commentDate.classList.add("detail-comment-date")
       commentDate.innerText = date
-      
       // console.log(commentDate)
   
       // 작성자
@@ -25,24 +25,34 @@ function reviewSubmit() {
       // commentWrite.innerText = reviewValue
   
       // 리뷰내용
-  
+      
+      // const commentDel = document.createElement("i")
+      // commentDel.classList.add("fas","fa-minus-circle","detail-comment-del")
+      
       const commentReview = document.createElement("div")
       commentReview.classList.add("detail-comment-review")
       commentReview.innerText = reviewValue
-  
+      // commentReview.appendChild(commentDel)
       
       const createComment = document.getElementById("detail-comment-box")
       createComment.appendChild(commentReview)
       createComment.appendChild(commentDate)
-  
+
+      reviewsObj = {reviewValue, date}
+      
+      console.log(reviewsObj)
+      
       reviewInput.value = "";
     }
   }
 }
 
-
+export default reviewSubmit
 // 댓글 삭제
 
-function reviewDel(){
-  console.log("나는 바보")
-}
+// function reviewDelBtn(e){
+//   const reviewDel = document.getElementById("detail-comment-del")
+//   reviewDel.addEventListener("click", (event) => {
+//     console.log(event.target)
+//   })
+// }
